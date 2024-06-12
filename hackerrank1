@@ -1,0 +1,17 @@
+#학생 이름, 점수 있는 자료에서 두번쨰로 낮은 점수인 학생이름 알파벳 순서로 출력하기
+
+if __name__ == '__main__':
+    stu = [] # 빈리스트 생성
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        stu.append([name, score])
+        
+  
+    scores = sorted(set(s[1] for s in stu)) # 점수만 따로 리스트
+    sec_low_score = scores[1]
+    
+    sec_low_name = sorted(s[0] for s in stu if s[1] == sec_low_score) #두번째로 낮은 학생 이름만 리스트  
+
+    for name in sec_low_name:
+        print(name)
