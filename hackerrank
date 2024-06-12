@@ -1,6 +1,8 @@
+두번째로 큰 수 출력하기
+
 if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split())
-    unique_arr = list(set(arr))
+    unique_arr = list(set(arr)) #set으로 중복숫자 제거, 다시 list로 순서 있게 변환
     sorted_arr = sorted(unique_arr, reverse = True)
     print(sorted_arr[1])
