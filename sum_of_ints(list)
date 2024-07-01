@@ -1,0 +1,7 @@
+def sum_of_ints(l: list) -> int:
+    ints_list = [i for i in l if isinstance(i, int)]
+    return sum(ints_list)
+
+# 예제 사용
+example_list = [1, 2, 'a', 3, 4.5, 5]
+print(sum_of_ints(example_list))  # 출력: 11
