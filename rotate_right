@@ -1,0 +1,11 @@
+
+def rotate_right(s: str, n: int) -> str:
+    # Handle cases where n is greater than the length of the string
+    n = n % len(s)
+    # Rotate the string by slicing
+    rotated_str = s[-n:] + s[:-n]
+    return rotated_str
+
+# Example usage
+result = rotate_right('abcd', 1)
+print(result)  # Output: "dabc"
