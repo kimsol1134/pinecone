@@ -1,0 +1,10 @@
+def lds(numbers: list[int]) -> int:
+    b = [numbers[0]]
+    for i in range(1,len(numbers)):
+        if numbers[i] < b[-1]:
+            b.append(numbers[i])
+        else :
+            if len(numbers) - i +1 > len(b):
+                b= [numbers[i]]
+
+    return len(b)
